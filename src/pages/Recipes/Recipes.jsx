@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Recipes.css'
-import RecipeCard from '../../components/RecipeCard/RecipeCard';
+import RecipeList from '../../components/RecipeList/RecipeList';
 const Recipes = () => {
     const [keyword, setKeyword] = useState('');
     const [recipes, setRecipes] = useState([]);
@@ -11,7 +11,6 @@ const Recipes = () => {
 
     useEffect(() => {
         if (keyword) {
-            // Fetch recipes from Edamam API when keyword changes
             fetch(API_ENDPOINT)
                 .then(response => response.json())
                 .then(data => {
@@ -33,11 +32,7 @@ const Recipes = () => {
                 value={keyword}
                 onChange={handleKeywordChange}
             />
-            <div className="recipe-cards-container">
-                {recipes.map(recipe => (
-                    <RecipeCard key={recipe.recipe.label} recipe={recipe} />
-                ))}
-            </div>
+            <RecipeList recipes={recipes} />
         </div>
     );
 };
