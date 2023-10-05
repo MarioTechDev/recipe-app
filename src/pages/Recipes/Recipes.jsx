@@ -7,7 +7,8 @@ const Recipes = () => {
 
     const API_KEY = process.env.REACT_APP_EDAMAM_API_KEY;
     const APP_ID = process.env.REACT_APP_EDAMAM_APP_ID;
-    const API_ENDPOINT = `https://api.edamam.com/search?q=${keyword}&app_id=${APP_ID}&app_key=${API_KEY}`;
+    const API_ENDPOINT = `https://api.edamam.com/api/recipes/v2?type=public&q=${keyword}&app_id=${APP_ID}&app_key=${API_KEY}`;
+    
 
     useEffect(() => {
         if (keyword) {
