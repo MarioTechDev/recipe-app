@@ -1,4 +1,7 @@
 body {
+  font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -7,4 +10,8 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+  color: inherit;
 }
