@@ -1,5 +1,8 @@
+import React from 'react';
 import RecipeCard from "../RecipeCard/RecipeCard"
 import './RecipeList.css'
+
+
 const RecipeList = ({ recipes }) => {
     return (
         <div className="recipe-cards-container">

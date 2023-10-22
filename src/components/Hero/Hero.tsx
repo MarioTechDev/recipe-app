@@ -1,9 +1,10 @@
+import React from "react";
 import './Hero.css'
 import { Link } from "react-router-dom";
 import FoodImage from '../../assets/foodimg1.jpg'
+
+
 const Hero = () => {
-
-
     return (
         <section className="section-hero">
             <div className="hero">
@@ -20,7 +21,7 @@ const Hero = () => {
                 </div>
                 <div className="hero-img-box">
                     <img
-                        src={FoodImage}
+                        src={FoodImage as string}
                         alt="Woman enjoying food, meals in storage container, and food bowls on a table"
                         className="hero-img"
                     />

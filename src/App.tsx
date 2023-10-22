@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -10,8 +11,8 @@ function App() {
         <Navbar />
         <div className="container">
           <Routes>
-            <Route path="/" element=<Home /> />
-            <Route path="/recipes" element=<Recipes /> />
+            <Route path="/" element={<Home />} />
+            <Route path="/recipes" element={<Recipes />} />
           </Routes>
         </div>
         <Footer />
